@@ -49,11 +49,11 @@ fn analyze_games(contents: &str) -> (u32, u32) {
                     _ => (),
                 }
 
-                //if min_colors.get(color).unwrap() < number { min_colors.insert("red", 0) };
                 if min_colors.get(color).unwrap().to_owned() < number.to_owned() { min_colors.insert(color, number.to_owned()); };
             }
         }
         if passed { games_passed.push(game_nr as u32) };
+        
         power_cubes.push(
             min_colors.get(&"red").unwrap().to_owned() *
             min_colors.get(&"green").unwrap().to_owned() *
