@@ -107,8 +107,6 @@ fn sort_hands(hands_and_bids: Vec<(String, u32)>) -> Vec<(String, u32)> {
             }
         }
 
-        
-
         let mut hand_cards = hand.fields_as_array();
         let mut jokers = 0;
 
